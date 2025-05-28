@@ -85,8 +85,29 @@ This environment supported:
 
 ## 🚀 Results & Model Evaluation
 
-**Coming Soon:**  
-Detailed evaluation results, performance metrics, and model comparison insights will be added here shortly.
+## 🏆 Model Performance Hierarchy
+
+| Model       | Macro F1 | Δ vs Best | Key Strength          | Critical Weakness          |
+|-------------|----------|-----------|-----------------------|----------------------------|
+| **Qwen 2.5** | 0.926    | -         | Neutral class (0.99)  | Positive recall (0.87)      |
+| **FinBERT**  | 0.871    | -5.9%     | Balanced performance  | Negative precision (0.82)   |
+| **FiLM**     | 0.869    | -6.1%     | Negative recall (0.96)| Neutral F1 consistency      |
+
+## 🔍 Macro F1 Insights
+
+### Generalized LLM Breakthrough
+- Qwen 2.5's **0.926 F1** defies domain adaptation expectations, outperforming financial-specific models by **+5.5-5.7%**
+
+### Domain Models' Tradeoffs
+- FinBERT shows **most stable** F1 across classes (±0.04 variance)
+- FiLM's negative recall (0.96) comes at precision cost (0.80) → High false positives
+
+### Class-Level Revelations
+```text
+According to results, predicting "Positive Sentiment" was the hardest task.  
+• Best F1 (Qwen): 0.93  
+• Worst F1 (FiLM): 0.83  
+```
 
 ---
 
